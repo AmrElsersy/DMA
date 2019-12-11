@@ -1,0 +1,120 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+vClock_Generator
+!s110 1575906034
+!i10b 1
+!s100 HkeOG;2efEeBfb4b@Gm492
+IjF?9[><b7W`k_441N_k1T0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/user/Desktop/DMA
+w1575906011
+8C:/Users/user/Desktop/DMA/RAM.v
+FC:/Users/user/Desktop/DMA/RAM.v
+L0 61
+Z2 OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1575906034.000000
+!s107 C:/Users/user/Desktop/DMA/RAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/RAM.v|
+!s101 -O0
+!i113 1
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@clock_@generator
+vMIPS
+Z4 !s110 1576076123
+!i10b 1
+!s100 NGYgPi@i30YI2a>N<2c5Z0
+I7:4Z@g;aB?kRJb@T0k2IG2
+R0
+R1
+Z5 w1576076120
+Z6 8C:/Users/user/Desktop/DMA/MIPS.v
+Z7 FC:/Users/user/Desktop/DMA/MIPS.v
+L0 2
+R2
+r1
+!s85 0
+31
+Z8 !s108 1576076123.000000
+Z9 !s107 RAM.v|C:/Users/user/Desktop/DMA/MIPS.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/MIPS.v|
+!s101 -O0
+!i113 1
+R3
+n@m@i@p@s
+vRAM
+R4
+!i10b 1
+!s100 ;R3:Y?6nna?]LAf8DGl931
+IgQ=4j=6P]o8>^>``A8jYh3
+R0
+R1
+Z11 w1576067843
+Z12 8RAM.v
+Z13 FRAM.v
+L0 1
+R2
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R3
+n@r@a@m
+vtb_MIPS
+R4
+!i10b 1
+!s100 QQQWKQ4NmIg:7HMH;6iSF3
+IkK4>ZOUPDKbD7Z]559^Lk3
+R0
+R1
+R5
+R6
+R7
+L0 156
+R2
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R3
+ntb_@m@i@p@s
+vtb_RAM
+R4
+!i10b 1
+!s100 gY4>_4ig?eLhl^S2PDh[B0
+Ih;4_L7WTdja]6>3HDUJ6`3
+R0
+R1
+R11
+R12
+R13
+L0 56
+R2
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+!i113 1
+R3
+ntb_@r@a@m

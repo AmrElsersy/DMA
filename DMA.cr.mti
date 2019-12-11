@@ -1,0 +1,9 @@
+C:/Users/user/Desktop/DMA/RAM.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/RAM.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module RAM
+-- Compiling module tb_RAM
+
+Top level modules:
+	tb_RAM
+
+} {} {}}
