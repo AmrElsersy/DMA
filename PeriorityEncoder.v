@@ -1,4 +1,12 @@
-module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, RESET , clk ); 
+/*
+ * Missing : 
+ * 1- rotaing priority    
+*/
+
+
+
+
+module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, channel_num , RESET , clk ); 
 
 /*****************inputs from internal Registers ****************/ 
 
@@ -29,7 +37,8 @@ input wire HLDA ;
 input wire RESET ;
 /*****************outputs of DMA pins ****************/ 
 output reg HRQ ; 
-output reg [3:0] DACK ; 
+output reg [3:0] DACK ;
+output reg [2:0] channel_num ;  
 /******************** wires for Decoders and muxs********************/ 
 wire [3:0] channel ; 
 
@@ -63,15 +72,21 @@ else begin
        // in_commandReg_3bits[2] : 0--> DACK sense active low  , 1--> DACK sense active High
        if (in_commandReg_3bits[2]) begin 
        // case of active high 
-          while (!HLDA) begin /// polling till the Ack is Recieved from CPU 
-          end // end of while 
-          DACK <= channel ; 
+             if(HLDA) begin // wait till the Ack is Recieved from CPU 
+                 DACK <= channel ;  
+             end // end of HLDA condition 
+             else begin 
+                 DACK <= 4'b0000 ; 
+             end
        end  
        else begin 
        // case of active high 
-          while (!HLDA) begin /// polling till the Ack is Recieved from CPU 
-          end // end of while 
-          DACK <= ~channel ;
+             if(HLDA) begin // wait till the Ack is Recieved from CPU 
+                 DACK <= ~channel ;  
+             end // end of HLDA condition 
+             else begin 
+                 DACK <= 4'b0000 ; 
+             end
        end // end of else 
 
    end // end of requestReg condidtion 
@@ -90,9 +105,10 @@ else begin
                                   begin 
                                         if( (!in_maskReg_4bits[0]) && (!DREQ[0]) )
                                            begin 
-                                                  HRQ = 1'b1 ; 
+                                                  HRQ = 1'b1 ;
+                                                  channel_num <=2'b00 ;  
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
-                                                          DACK <= 4'b1100 ;  
+                                                          DACK <= 4'b1100 ;   
                                                   end // end of HLDA condition 
                                                   else begin 
                                                         DACK <= 4'b0000 ; 
@@ -101,8 +117,9 @@ else begin
                                         else if ( (!in_maskReg_4bits[1]) && (!DREQ[1]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b01 ;                                                       
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
-                                                          DACK <= 4'b1101 ;  
+                                                          DACK <= 4'b1101 ;   
                                                   end // end of HLDA condition 
                                                   else begin 
                                                         DACK <= 4'b0000 ; 
@@ -111,6 +128,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[2]) && (!DREQ[2]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b10 ; 
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b1011 ;  
                                                   end // end of HLDA condition 
@@ -120,7 +138,8 @@ else begin
                                            end 
                                         else if ( (!in_maskReg_4bits[3]) && (!DREQ[3]))
                                            begin 
-                                                  HRQ <= 1'b1 ; 
+                                                  HRQ <= 1'b1 ;
+                                                  channel_num <=2'b11 ;  
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b0111 ;  
                                                   end // end of HLDA condition 
@@ -140,6 +159,7 @@ else begin
                                         if(  (!in_maskReg_4bits[0]) && (DREQ[0]) )
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b00 ; 
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b1110 ;  
                                                   end // end of HLDA condition 
@@ -150,6 +170,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[1]) && (DREQ[1]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b01 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b1101 ;  
                                                   end // end of HLDA condition 
@@ -160,6 +181,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[2]) && (DREQ[2]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b10 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b1011 ;  
                                                   end // end of HLDA condition 
@@ -170,6 +192,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[3]) && (DREQ[3]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b11 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b0111 ;  
                                                   end // end of HLDA condition 
@@ -189,6 +212,7 @@ else begin
                                         if(  (!in_maskReg_4bits[0]) && (!DREQ[0]) )
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b00 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b0001 ;  
                                                   end // end of HLDA condition 
@@ -199,6 +223,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[1]) && (!DREQ[1]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b01 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b0010 ;  
                                                   end // end of HLDA condition 
@@ -209,6 +234,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[2]) && (!DREQ[2]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b10 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b0100 ;  
                                                   end // end of HLDA condition 
@@ -219,6 +245,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[3]) && (!DREQ[3]))
                                            begin 
                                                   HRQ <= 1'b1 ;
+                                                  channel_num <=2'b11 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                           DACK <= 4'b1000 ;  
                                                   end // end of HLDA condition 
@@ -238,6 +265,7 @@ else begin
                                         if(  (!in_maskReg_4bits[0]) && (DREQ[0]) )
                                            begin 
                                                   HRQ <= 1'b1 ; 
+                                                  channel_num <=2'b00 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                             DACK <= 4'b0001 ;  
                                                   end // end of HLDA condition 
@@ -248,6 +276,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[1]) && (DREQ[1]))
                                            begin 
                                                   HRQ <= 1'b1 ; 
+                                                  channel_num <=2'b01 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                          DACK <= 4'b0010 ; 
                                                   end // end of HLDA condition 
@@ -258,6 +287,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[2]) && (DREQ[2]))
                                            begin 
                                                   HRQ <= 1'b1 ; 
+                                                  channel_num <=2'b10 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                          DACK <= 4'b0100 ; 
                                                   end // end of HLDA condition
@@ -268,6 +298,7 @@ else begin
                                         else if ( (!in_maskReg_4bits[3]) && (DREQ[3]))
                                            begin 
                                                   HRQ <= 1'b1 ; 
+                                                  channel_num <=2'b11 ;
                                                   if(HLDA) begin // wait till the Ack is Recieved from CPU 
                                                          DACK <= 4'b1000 ; 
                                                   end // end of HLDA condition 
