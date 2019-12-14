@@ -1,9 +1,28 @@
-C:/Users/user/Desktop/DMA/RAM.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/RAM.v
+C:/Users/user/Desktop/DMA/IO_Device.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/IO_Device.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IO
+-- Compiling module tb_IO
+
+Top level modules:
+	tb_IO
+
+} {} {}} C:/Users/user/Desktop/DMA/RAM.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/RAM.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module RAM
 -- Compiling module tb_RAM
 
 Top level modules:
 	tb_RAM
+
+} {} {}} C:/Users/user/Desktop/DMA/MIPS.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/MIPS.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module RAM
+-- Compiling module tb_RAM
+-- Compiling module MIPS
+-- Compiling module tb_MIPS
+
+Top level modules:
+	tb_RAM
+	tb_MIPS
 
 } {} {}}

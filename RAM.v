@@ -21,7 +21,7 @@ assign Data_Bus = ( !Control  && myBus )? data_bus : 'bz ;	// slave have access 
 always@(posedge IReady)
 begin
 $display("myBus=%0d",myBus);
-if (Address_Bus >= first && Address_Bus <= last ) begin
+if (myBus ) begin
 	if (Control == 1) begin // write
 		Memory[Address_Bus] = Data_Bus; // store the Data_Bus in the Address location in memory
 		tready = 1;		// triger the slave ack

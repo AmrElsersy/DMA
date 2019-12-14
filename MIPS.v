@@ -162,15 +162,14 @@ reg HOLD ; wire HOLD_ACK;
 
 RAM ram_ray2(Data_Bus,Address_Bus,Control,IReady,TReady,clk);
 MIPS mips_ray2(Data_Bus,Address_Bus,Control,IReady,TReady,clk,HOLD,HOLD_ACK);
-
-always begin #5 clk = ~clk; end
-initial begin clk = 0 ; HOLD = 0 ; end
+reg ray2;
+always begin #10 clk = ~clk; end
+initial begin clk = 0 ; HOLD = 0 ; ray2=10; end
 //initial begin $monitor("Data=%d,Add=%d,Control=%d,IReady=%d,TReady=%d",Data_Bus,Address_Bus,Control,IReady,TReady);end
 // test HOLD
 initial begin
-#30
-HOLD = 1;
-#20
-HOLD = 0;
+//HOLD = 1;
+//#20
+//HOLD = 0;
 end
 endmodule

@@ -1,13 +1,9 @@
 addi $s0,$s0,4
 addi $s1,$s1,5
 addi $s2,$s2,6
-SW $s0,20
-SW $s1,21
-SW $s2,22
-LW $s3,20
-LW $s4,21
-LW $s5,22
-LW $s6,0
-LW $s7,1
+SW $s0,1
+SW $s1,2
+SW $s2,3
+
 
 
