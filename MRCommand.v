@@ -18,11 +18,11 @@
    
 */
 
-module Mask_Register(maskedChannels,CLK,CS,IOR,IOW,address_in,autoInitalization,reset,accessAllCommand);
+module Mask_Register(maskedChannels,CLK,IOR,IOW,address_in,autoInitalization,reset,accessAllCommand);
 
 
 input wire reset,autoInitalization;
-input wire CLK,CS;
+input wire CLK;
 input wire IOR,IOW;
 input wire [3:0] address_in;
 
@@ -35,11 +35,6 @@ begin
 maskedChannels = 4'b0000;
 end
 
-always @(autoInitalization)
-begin
-if(autoInitalization)
-maskedChannels <= 4'b0000;
-end
 
 always @(reset)
 begin
@@ -50,7 +45,14 @@ end
 
 always @(posedge CLK)
 begin
-maskedChannels <= (CS== 1'b0 && address_in== 4'b1111 && IOW== 1'b0 && IOR== 1'b1)?  accessAllCommand : maskedChannels;
+     if (address_in== 4'b1111 && IOW== 1'b0 && IOR== 1'b1)
+        begin 
+                maskedChannels <= accessAllCommand ;
+        end 
+    else if (autoInitalization)
+         begin 
+                maskedChannels <=  4'b0000; 
+         end 
 end
 
 endmodule

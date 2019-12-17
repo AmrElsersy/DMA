@@ -5,6 +5,11 @@ input wire [2:0] DataBus;
 input wire [3:0] Address;
 output reg [2:0] Request;
 
+initial
+begin
+Request <= 0;
+end
+
 always@(Reset or Auto_Initialization)
 	begin
 		if( Reset || Auto_Initialization )

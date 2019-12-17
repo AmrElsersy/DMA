@@ -1,27 +1,21 @@
 //*****NOTE******
 //IOR and IOW shall be a flag to the address pins that they will work as input
-module timingcontrol(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,Address_Bus);
+module timingcontrol(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,IOflag); //IOflag for data is out from IO device
 
 input cs,clk,HLDA,reset,wrflag;            //wrflag is a flag indicates wether the IO device will read or write
 reg write;
 output reg AEN;
-inout TReady, IReady,IOR,IOW,MEMWR;         //IOW and IOR always input to the DMA but they are defined as inout because the are on the control bus
-inout [15:0] Address_Bus;
-reg [15:0] address;
+inout TReady, IReady,MEMWR;        //IOW and IOR always input to the DMA but they are defined as inout because the are on the control bus
+input IOR,IOW,IOflag;
 reg iready,tready,memwr;
-wire myBus;
-parameter first = 32 , last = 48;           //address of Registers inside the DMA
 
-
-assign myBus = (Address_Bus >= first && Address_Bus <= last);   //check if the DMA called by the processor
-assign Address_Bus= (HLDA)? address: 'bz;                       //when the DMA is a master and takes the address bus
 assign IReady = (HLDA)? iready: 1'bz;                           //when the DMA is a master
-assign TReady = (myBus)? tready :1'bz ;                         //When the DMA is a target and called by address from the processor
+assign TReady = ((!IOR) || (!IOW))? tready :1'bz ;                         //When the DMA is a target and called by address from the processor
 assign MEMWR = (HLDA)? memwr :1'bz ;                            
 
 always @(posedge clk or posedge reset)  
 begin
-if (cs) begin 
+if (!cs) begin 
 if (!reset)begin
 
    if (HLDA) begin AEN <=1; end
@@ -29,14 +23,17 @@ if (!reset)begin
 
    if (wrflag) begin
      memwr <=1;
-     iready <=1;
-     @(posedge TReady);   //waiting for ack from memo
-     iready<=0;
+        if (IOflag)begin
+           iready <=1;
+            @(posedge TReady);   //waiting for ack from memo
+            iready<=0;
+         end
+     
    end
    else if (wrflag ==0) begin
       memwr <=0;
       iready<=1;
-      @(posedge TReady);
+      @(posedge TReady); //waiting for memo to finish
       iready<=0;
      end
  
@@ -57,9 +54,9 @@ endmodule
 module tbtiming();
 reg cs,reset,clk,wrflag,HLDA,iready,tready;
 wire AEN,IReady,TReady,MEMWR;
-wire[15:0] Address_Bus;
+reg IOflag;
 
-timingcontrol my(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,Address_Bus);
+timingcontrol my(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,IOflag);
 
 always begin #10 clk=~clk; end
 
@@ -74,6 +71,7 @@ wrflag=1'b0;
 tready = 1'b1;
 HLDA=1'b1;
 reset= 1'b0;
+IOflag= 1'b1;
 $monitor(" memwr: %b  wrflag: %b AEN: %b",MEMWR,wrflag,AEN);
 end
 endmodule 
