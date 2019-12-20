@@ -1,0 +1,166 @@
+C:/Users/user/Desktop/DMA/temporary_register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/temporary_register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module temporary
+-- Compiling module tbtemp
+
+Top level modules:
+	tbtemp
+
+} {} {}} C:/Users/user/Desktop/DMA/ReadBuffer_RW_Bus.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/ReadBuffer_RW_Bus.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ReadBuffer_RW_Bus
+
+Top level modules:
+	ReadBuffer_RW_Bus
+
+} {} {}} C:/Users/user/Desktop/DMA/Read_buffer_current.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Read_buffer_current.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Read_buffer_current
+
+Top level modules:
+	Read_buffer_current
+
+} {} {}} C:/Users/user/Desktop/DMA/PeriorityEncoder.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/PeriorityEncoder.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Priority
+
+Top level modules:
+	Priority
+
+} {} {}} C:/Users/user/Desktop/DMA/IO_Device.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/IO_Device.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IO
+-- Compiling module tb_IO
+
+Top level modules:
+	tb_IO
+
+} {} {}} C:/Users/user/Desktop/DMA/Status_register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Status_register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module STATUS_reg
+
+Top level modules:
+	STATUS_reg
+
+} {} {}} C:/Users/user/Desktop/DMA/RAM.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/RAM.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module RAM
+-- Compiling module tb_RAM
+
+Top level modules:
+	tb_RAM
+
+} {} {}} C:/Users/user/Desktop/DMA/Computer_architecture.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Computer_architecture.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module computer_arch
+
+Top level modules:
+	computer_arch
+
+} {} {}} C:/Users/user/Desktop/DMA/DMA.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/DMA.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module DMA
+
+Top level modules:
+	DMA
+
+} {} {}} C:/Users/user/Desktop/DMA/InputOutput_Buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/InputOutput_Buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IO_Buffer
+
+Top level modules:
+	IO_Buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/output_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/output_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module output_buffer
+
+Top level modules:
+	output_buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/Data_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Data_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module DATA_buffer
+
+Top level modules:
+	DATA_buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/Command_Register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Command_Register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Command_Register
+
+Top level modules:
+	Command_Register
+
+} {} {}} C:/Users/user/Desktop/DMA/write_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/write_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module write_buffer
+
+Top level modules:
+	write_buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/Request_Register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Request_Register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Request_Register
+
+Top level modules:
+	Request_Register
+
+} {} {}} C:/Users/user/Desktop/DMA/MRCommand.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/MRCommand.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Mask_Register
+
+Top level modules:
+	Mask_Register
+
+} {} {}} C:/Users/user/Desktop/DMA/ReadWrite_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/ReadWrite_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ReadWrite_buffer
+
+Top level modules:
+	ReadWrite_buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/timing_control.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/timing_control.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module timingcontrol
+-- Compiling module tbtiming
+
+Top level modules:
+	tbtiming
+
+} {} {}} C:/Users/user/Desktop/DMA/Mode_register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Mode_register.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module MODE_reg
+
+Top level modules:
+	MODE_reg
+
+} {} {}} C:/Users/user/Desktop/DMA/io_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/io_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IO_buffer
+
+Top level modules:
+	IO_buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/Read_buffer_reg.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Read_buffer_reg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module READ_buffer_base
+
+Top level modules:
+	READ_buffer_base
+
+} {} {}} C:/Users/user/Desktop/DMA/Read_Buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Read_Buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Read_Buffer
+
+Top level modules:
+	Read_Buffer
+
+} {} {}} C:/Users/user/Desktop/DMA/Decoder_2to4.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Decoder_2to4.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Decoder2to4
+
+Top level modules:
+	Decoder2to4
+
+} {} {}}

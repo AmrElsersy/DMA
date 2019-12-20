@@ -1,0 +1,30 @@
+module MODE_reg(clk,Mode,address_in,IOR,IOW,ch_select,mode_out,mem2mem,flag_mem);
+
+input [5:0] Mode;
+
+input [3:0] address_in;
+input [1:0] ch_select;
+input IOR,IOW,clk,mem2mem,flag_mem;
+
+output [5:0] mode_out;
+
+reg [5:0] mode [0:3];
+
+assign mode_out = (mem2mem) ? mode[~flag_mem] : mode[ch_select];
+
+initial
+begin
+mode[0] <= 6'b101010;
+mode[1] <= 6'b101001;
+mode[2] <= 6'b100001;
+end
+
+always @(posedge clk)
+begin
+if(address_in == 11 && IOW == 0 && IOR == 1)
+begin
+mode[ch_select] <= Mode;
+end
+end
+
+endmodule
