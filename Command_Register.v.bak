@@ -12,7 +12,9 @@ assign out_commandWire = out_commandReg;
 
 initial
 begin
-	out_commandReg <= 8'h1100_0001 ; // processor to dma
+
+#200
+	out_commandReg <= 8'hc1 ; // processor to dma
 end 
 
 always@(negedge clk)

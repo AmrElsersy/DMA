@@ -36,7 +36,7 @@ if (!cs) begin
    tready = 0;
    end
 	
-if (!reset)begin
+if (1)begin
 
    if (HLDA) begin AEN <=1; end
    else if (!HLDA) begin AEN <=0; end

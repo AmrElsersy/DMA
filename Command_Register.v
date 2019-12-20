@@ -12,6 +12,8 @@ assign out_commandWire = out_commandReg;
 
 initial
 begin
+
+#100
 	out_commandReg <= 8'hc1 ; // processor to dma
 end 
 

@@ -14,7 +14,7 @@ assign mode_out = (mem2mem) ? mode[~flag_mem] : mode[ch_select];
 
 initial
 begin
-#100
+#200
 mode[0] <= 6'b101010;
 mode[1] <= 6'b101001;
 mode[2] <= 6'b100001;

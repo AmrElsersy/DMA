@@ -486,7 +486,7 @@ initial begin file2 = $fopen("feedback.txt","w"); end
 always@(negedge clk)
 begin
 if(f) begin f = 0 ; end 
-else $fwrite(file2,"%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d\n",PC-1,Data_Bus,Address_Bus,Control,HOLD,HOLD_ACK,DONT_NEED_BUS,0,0,0,0);
+else $fwrite(file2,"%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d,%0d\n",PC,Data_Bus,Address_Bus,Control,HOLD,HOLD_ACK,DONT_NEED_BUS,0,0,0,0);
 end
 // =========================================================
 

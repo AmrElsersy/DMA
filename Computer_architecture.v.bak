@@ -4,7 +4,7 @@ reg clk,CS,Reset;
 wire [7:0] Data_Bus;
 wire [3:0] DREQ,DACK;
 wire [15:0] Address_Bus;
-wire MEMWR,HLDA,HRQ,TReady,IReady,EOP,AEN,IOR,IOW,IOflag,CPU_Event;
+wire MEMWR,HLDA,HRQ,TReady,IReady,EOP,AEN,IOR,IOW,IOflag,CS,Reset,CPU_Event;
 
 /* **********wires********** */
 initial begin

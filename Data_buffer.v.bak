@@ -11,7 +11,7 @@ output flag_data_ready;
 reg [7:0] Data_bus;
 
 //assign Data_bus_ex = (Data_flag==1) ? temp : (TReady && ((!CS)&&(!IOR)) ) ? in_dataBuffer : 8'hzz ; 
-assign Data_bus_ex = (HLDA===1 && TReady===1 && ((CS === 0)&&(IOR === 0)) ) ? in_dataBuffer :(Data_flag === 1 && MEMRW === 1 && MemToMem === 1 && HLDA===1) ? Data_bus : 8'hzz ; 
+assign Data_bus_ex = (HLDA===1 && TReady===1 && ((CS === 0)&&(IOR === 0)) ) ? in_dataBuffer :(Data_flag === 1 && MEMRW === 1 && MemToMem === 1 && HLDA===0) ? Data_bus : 8'hzz ; 
 
 assign flag_data_ready = (Data_flag) ? 1 : 0;
 
