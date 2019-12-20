@@ -45,8 +45,8 @@ wire [3:0] channel ;
 /*********************** Imlpmentation of DMA Priority ***********************/
 initial begin  
 HRQ <= 0;
-#120
-HRQ <= 1;
+//#120
+//HRQ <= 1;
 end 
 
 Decoder2to4 Decoder1 (channel[3:0] , in_requestReg_3bits[1:0] );

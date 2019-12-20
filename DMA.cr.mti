@@ -27,13 +27,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Read_buffer_current
 
-} {} {}} C:/Users/user/Desktop/DMA/IO_Device.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/IO_Device.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module IO
-
-Top level modules:
-	IO
-
 } {} {}} C:/Users/user/Desktop/DMA/Status_register.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Status_register.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module STATUS_reg
@@ -48,14 +41,6 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	RAM
 
-} {} {}} C:/Users/user/Desktop/DMA/MIPS.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/MIPS.v
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module MIPS
--- Compiling module tb_MIPS
-
-Top level modules:
-	tb_MIPS
-
 } {} {}} C:/Users/user/Desktop/DMA/Computer_architecture.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/Computer_architecture.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module computer_arch
@@ -65,6 +50,14 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	computer_arch
 	tb_mem2mem
+
+} {} {}} C:/Users/user/Desktop/DMA/MIPS.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/MIPS.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module MIPS
+-- Compiling module tb_MIPS
+
+Top level modules:
+	tb_MIPS
 
 } {} {}} C:/Users/user/Desktop/DMA/DMA.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/DMA.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -121,6 +114,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 
 Top level modules:
 	Mask_Register
+
+} {} {}} C:/Users/user/Desktop/DMA/ReadWrite_buffer.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/ReadWrite_buffer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ReadWrite_buffer
+
+Top level modules:
+	ReadWrite_buffer
 
 } {} {}} C:/Users/user/Desktop/DMA/timing_control.v {1 {vlog -work work -stats=none C:/Users/user/Desktop/DMA/timing_control.v
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015

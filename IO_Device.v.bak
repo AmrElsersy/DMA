@@ -22,7 +22,7 @@ wire CS;
 
 // ******* Assign inout **********
 assign CS = (Address_Bus>= first && Address_Bus <= last) ;
-assign Data_Bus = (CS && Control === 0)? data_bus : 'bz ;	
+assign Data_Bus = (Control === 0)? data_bus : 'bz ;	
 assign TReady = (CS === 1) ? tready : 'bz;
 // ============ Normal CPU Read/Write ============
 always@(posedge IReady)

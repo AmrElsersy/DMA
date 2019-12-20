@@ -494,6 +494,7 @@ integer file1;
 // ******** initialization ***********
 initial
 begin
+DONT_NEED_BUS = 1;
 // pc
 PC = 0;
 // Instruction Memory

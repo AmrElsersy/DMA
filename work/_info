@@ -53,13 +53,13 @@ r1
 R7
 n@command_@register
 vcomputer_arch
-Z8 !s110 1576861801
+Z8 !s110 1576869022
 !i10b 1
-!s100 iHbaXGc3C1z^hY89fz:2R3
-I=PaX^U3Ld0W_eonOJ280m3
+!s100 nhaOYHigIV7N]]`jCAzCI3
+IO_DT62<YkT1[;g2^>NO1g3
 R0
 R1
-Z9 w1576861610
+Z9 w1576868999
 Z10 8C:/Users/user/Desktop/DMA/Computer_architecture.v
 Z11 FC:/Users/user/Desktop/DMA/Computer_architecture.v
 L0 1
@@ -67,7 +67,7 @@ R4
 r1
 !s85 0
 31
-Z12 !s108 1576861801.000000
+Z12 !s108 1576869022.000000
 Z13 !s107 C:/Users/user/Desktop/DMA/Computer_architecture.v|
 Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Computer_architecture.v|
 !s101 -O0
@@ -76,14 +76,14 @@ R7
 vcomputer_arch_memtomem
 R8
 !i10b 1
-!s100 TE1m`7_X^h4M<Bk8BoUBC1
-I=SkLO71cn=Ijo`AVm_m5W3
+!s100 R8<471`TRbNL`1KSXhYIW0
+I@LWQSE@HbgkDc?Od:d8im3
 R0
 R1
 R9
 R10
 R11
-L0 30
+L0 31
 R4
 r1
 !s85 0
@@ -161,13 +161,13 @@ r1
 R7
 n@d@m@a
 vIO
-R15
+!s110 1576869587
 !i10b 1
-!s100 TdGGl2nX9iQbe5LRZlmUm1
-IkkJX5hTOmfd6]B8O7Amn42
+!s100 d:4n:GWnD_;?[dYWkOGBe0
+IS<Fco3L4OEWm`XHiCTMJd0
 R0
 R1
-w1576820178
+w1576869584
 Z17 8C:/Users/user/Desktop/DMA/IO_Device.v
 Z18 FC:/Users/user/Desktop/DMA/IO_Device.v
 L0 1
@@ -175,9 +175,9 @@ R4
 r1
 !s85 0
 31
-R16
-Z19 !s107 C:/Users/user/Desktop/DMA/IO_Device.v|
-Z20 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/IO_Device.v|
+!s108 1576869587.000000
+!s107 C:/Users/user/Desktop/DMA/IO_Device.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/IO_Device.v|
 !s101 -O0
 !i113 1
 R7
@@ -271,23 +271,23 @@ R16
 R7
 n@mask_@register
 vMIPS
-Z21 !s110 1576862983
+Z20 !s110 1576868257
 !i10b 1
-!s100 c[:YOj@W^E7PJ@N9bU7`h2
-IJmj1e=M0]azADl:XP[fzJ2
+!s100 dX2CBC^AIgcmP7Df<fAoN3
+InD=O:k;<k`UFhgPYj=zc@3
 R0
 R1
-Z22 w1576862787
-Z23 8C:/Users/user/Desktop/DMA/MIPS.v
-Z24 FC:/Users/user/Desktop/DMA/MIPS.v
+Z21 w1576868247
+Z22 8C:/Users/user/Desktop/DMA/MIPS.v
+Z23 FC:/Users/user/Desktop/DMA/MIPS.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z25 !s108 1576862983.000000
-Z26 !s107 C:/Users/user/Desktop/DMA/MIPS.v|
-Z27 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/MIPS.v|
+Z24 !s108 1576868257.000000
+Z25 !s107 C:/Users/user/Desktop/DMA/MIPS.v|
+Z26 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/MIPS.v|
 !s101 -O0
 !i113 1
 R7
@@ -336,13 +336,13 @@ R16
 !i113 1
 R7
 vPriority
-!s110 1576865435
+!s110 1576868318
 !i10b 1
-!s100 h>LOzN>==7b^NanQ^a50H1
-IeTABnI1e0];]XagEPAbW^0
+!s100 3h?^ebm;H9;JIJHR<OBiM0
+I2A_00No9UHo<Bo;ciF`fJ0
 R0
 R1
-w1576865419
+w1576868316
 8C:/Users/user/Desktop/DMA/PeriorityEncoder.v
 FC:/Users/user/Desktop/DMA/PeriorityEncoder.v
 L0 9
@@ -350,7 +350,7 @@ R4
 r1
 !s85 0
 31
-!s108 1576865435.000000
+!s108 1576868318.000000
 !s107 C:/Users/user/Desktop/DMA/PeriorityEncoder.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/PeriorityEncoder.v|
 !s101 -O0
@@ -358,7 +358,7 @@ r1
 R7
 n@priority
 vRAM
-Z28 !s110 1576860161
+Z27 !s110 1576860161
 !i10b 1
 !s100 _OYnZ6UaR7`0O`aXMH@fD2
 I9dO@[Tf6O2zlbBW9M:L@72
@@ -372,7 +372,7 @@ R4
 r1
 !s85 0
 31
-Z29 !s108 1576860161.000000
+Z28 !s108 1576860161.000000
 R5
 R6
 !s101 -O0
@@ -401,7 +401,7 @@ r1
 !i113 1
 R7
 vRead_Buffer
-R28
+R27
 !i10b 1
 !s100 ^I<Q9G[ocb@KAP0A8ehP52
 IAP:YblN>YB4[Oh1G^i[hc3
@@ -415,7 +415,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/Read_Buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Read_Buffer.v|
 !s101 -O0
@@ -423,7 +423,7 @@ R29
 R7
 n@read_@buffer
 vREAD_buffer_base
-R28
+R27
 !i10b 1
 !s100 l[G:2zZo=G0a]zT;F>bTE0
 IB?@3TPmMf0CAT48jef`IG3
@@ -437,7 +437,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/Read_buffer_reg.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Read_buffer_reg.v|
 !s101 -O0
@@ -445,7 +445,7 @@ R29
 R7
 n@r@e@a@d_buffer_base
 vRead_buffer_current
-R28
+R27
 !i10b 1
 !s100 GH]nNJRK8=?^:z4eUAcJ90
 I_hgh91LcGQbd]H4m5f3mT2
@@ -459,7 +459,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/Read_buffer_current.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Read_buffer_current.v|
 !s101 -O0
@@ -467,7 +467,7 @@ R29
 R7
 n@read_buffer_current
 vReadBuffer_RW_Bus
-R28
+R27
 !i10b 1
 !s100 J1hEUOkbbFbOVUE0Xn@Ih1
 I_15;WRB0h9^iWTJ=o@>0`3
@@ -481,7 +481,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/ReadBuffer_RW_Bus.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/ReadBuffer_RW_Bus.v|
 !s101 -O0
@@ -489,7 +489,7 @@ R29
 R7
 n@read@buffer_@r@w_@bus
 vReadWrite_buffer
-!s110 1576866120
+!s110 1576868250
 !i10b 1
 !s100 fBcPkLFdPceK`JOBEl=5E1
 Id31U`7:V=KK^?LajV<jb[0
@@ -503,7 +503,7 @@ R4
 r1
 !s85 0
 31
-!s108 1576866120.000000
+!s108 1576868250.000000
 !s107 C:/Users/user/Desktop/DMA/ReadWrite_buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/ReadWrite_buffer.v|
 !s101 -O0
@@ -511,7 +511,7 @@ r1
 R7
 n@read@write_buffer
 vRequest_Register
-R28
+R27
 !i10b 1
 !s100 ?DgQ[Z[I1UJnKTDWLXEeX0
 Ikl[^1EkaXG1L^MeiKKLJ`0
@@ -525,7 +525,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/Request_Register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Request_Register.v|
 !s101 -O0
@@ -533,7 +533,7 @@ R29
 R7
 n@request_@register
 vSTATUS_reg
-R28
+R27
 !i10b 1
 !s100 9L6nG[mb5n^<VGmNDVb2B2
 I]SYYn4D8KjB6OK>BjP=8:2
@@ -547,7 +547,7 @@ R4
 r1
 !s85 0
 31
-R29
+R28
 !s107 C:/Users/user/Desktop/DMA/Status_register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/Status_register.v|
 !s101 -O0
@@ -570,8 +570,8 @@ r1
 !s85 0
 31
 !s108 1576704239.000000
+!s107 C:/Users/user/Desktop/DMA/IO_Device.v|
 R19
-R20
 !s101 -O0
 !i113 1
 R7
@@ -579,14 +579,14 @@ ntb_@i@o
 vtb_mem2mem
 R8
 !i10b 1
-!s100 `[FEV8[>@mM^WhGMome8^1
-IK5N7>;]dBMBH6PBaE`TNQ1
+!s100 @0lWJCZHD[gC<?1k1[=<02
+IFJj731AD[I?n`zGBVcUK@3
 R0
 R1
 R9
 R10
 R11
-L0 51
+L0 52
 R4
 r1
 !s85 0
@@ -598,23 +598,23 @@ R14
 !i113 1
 R7
 vtb_MIPS
-R21
+R20
 !i10b 1
-!s100 6=>?cgOB80_ifo5P4Y:9D3
-I=SX0iTh67`dENjKXZ:=ka1
+!s100 d^PNXSEWE07ISiUemnPB31
+IZPNGXhmNnme2^o1[YBVGh3
 R0
 R1
+R21
 R22
 R23
-R24
-L0 534
+L0 535
 R4
 r1
 !s85 0
 31
+R24
 R25
 R26
-R27
 !s101 -O0
 !i113 1
 R7
@@ -642,86 +642,86 @@ R6
 R7
 ntb_@r@a@m
 vtbtemp
-R28
+R27
 !i10b 1
 !s100 6@eAKaZYSj4?h<P@Pj4aB0
 IWI3__Sh9UTT;J2KeI[R2X0
 R0
 R1
-Z30 w1576597810
-Z31 8C:/Users/user/Desktop/DMA/temporary_register.v
-Z32 FC:/Users/user/Desktop/DMA/temporary_register.v
+Z29 w1576597810
+Z30 8C:/Users/user/Desktop/DMA/temporary_register.v
+Z31 FC:/Users/user/Desktop/DMA/temporary_register.v
 L0 19
 R4
 r1
 !s85 0
 31
-R29
-Z33 !s107 C:/Users/user/Desktop/DMA/temporary_register.v|
-Z34 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/temporary_register.v|
+R28
+Z32 !s107 C:/Users/user/Desktop/DMA/temporary_register.v|
+Z33 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/temporary_register.v|
 !s101 -O0
 !i113 1
 R7
 vtbtiming
-Z35 !s110 1576865259
+Z34 !s110 1576865259
 !i10b 1
 !s100 kGc:VnUJ2g??m:3e^kX;[2
 I[95;TZC5inWgck@BMf=jU3
 R0
 R1
-Z36 w1576865254
-Z37 8C:/Users/user/Desktop/DMA/timing_control.v
-Z38 FC:/Users/user/Desktop/DMA/timing_control.v
+Z35 w1576865254
+Z36 8C:/Users/user/Desktop/DMA/timing_control.v
+Z37 FC:/Users/user/Desktop/DMA/timing_control.v
 L0 96
 R4
 r1
 !s85 0
 31
-Z39 !s108 1576865259.000000
-Z40 !s107 C:/Users/user/Desktop/DMA/timing_control.v|
-Z41 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/timing_control.v|
+Z38 !s108 1576865259.000000
+Z39 !s107 C:/Users/user/Desktop/DMA/timing_control.v|
+Z40 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DMA/timing_control.v|
 !s101 -O0
 !i113 1
 R7
 vtemporary
-R28
+R27
 !i10b 1
 !s100 ]K5O6K[6:_Cc;L]Xo@Z=k1
 I8`T6C5PMQ:I:R^ZX6niPG2
 R0
 R1
+R29
 R30
 R31
-R32
 L0 1
 R4
 r1
 !s85 0
 31
-R29
+R28
+R32
 R33
-R34
 !s101 -O0
 !i113 1
 R7
 vtimingcontrol
-R35
+R34
 !i10b 1
 !s100 IZbeXCAHCbzUzLVCKRmgz3
 I80QXh]FA_RT_YBRSG0@480
 R0
 R1
+R35
 R36
 R37
-R38
 L0 3
 R4
 r1
 !s85 0
 31
+R38
 R39
 R40
-R41
 !s101 -O0
 !i113 1
 R7
