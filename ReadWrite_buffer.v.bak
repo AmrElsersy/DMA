@@ -154,7 +154,7 @@ end
 
 end
 
-else if(current_word[flag_mem] == 0 && mem2mem == 1) 
+else if(current_word[ch_select] == 0) 
 begin
 TC<=1 ; 
 end 

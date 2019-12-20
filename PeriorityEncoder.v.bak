@@ -6,7 +6,7 @@
 
 
 
-module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, channel_num , RESET , clk ); 
+module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, channel_num , RESET , clk,memtomem ); 
 
 /*****************inputs from internal Registers ****************/ 
 
@@ -30,7 +30,7 @@ input wire [2:0] in_requestReg_3bits;
  * in_maskReg_4bits[3] : 0--> Clear Channel 3 mask bit  , 1--> Set Channel 3 mask bit
  */
 input wire [3:0] in_maskReg_4bits ; 
-input wire clk ;  
+input wire clk ,memtomem;  
 /*****************inputs from DMA pins ****************/ 
 input wire [3:0] DREQ ; 
 input wire HLDA ; 

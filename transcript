@@ -17,9 +17,9 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim -c -do "run -all" work.computer_arch 
-# Start time: 19:45:53 on Dec 20,2019
+# Start time: 20:22:59 on Dec 20,2019
 # ** Error: ModelSim PE Student Edition only allows one session to run at a time.
 #  An instance of ModelSim PE Student Edition is already running on this machine.
 # Error loading design
-# End time: 19:45:53 on Dec 20,2019, Elapsed time: 0:00:00
+# End time: 20:23:00 on Dec 20,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

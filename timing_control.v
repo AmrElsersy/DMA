@@ -1,6 +1,6 @@
 //*****NOTE******
 //IOR and IOW shall be a flag to the address pins that they will work as input
-module timingcontrol(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,IOflag,mem2mem,Data_flag,flag_data_ready,address_ready,processor_write_done,myBus,command_writed,request_writed,address_bus); //IOflag for data is out from IO device
+module timingcontrol(wrflag,MEMWR,cs,clk,HLDA,AEN,reset,IReady,TReady,IOR,IOW,IOflag,mem2mem,Data_flag,flag_data_ready,address_ready,processor_write_done,myBus,command_writed,request_writed,address_bus,TC); //IOflag for data is out from IO device
 
 input cs,clk,HLDA,reset,wrflag,mem2mem,flag_data_ready,address_ready,myBus,processor_write_done,command_writed,request_writed;            //wrflag is a flag indicates wether the IO device will read or write
 input [15:0] address_bus;
@@ -9,7 +9,7 @@ reg write;
 output reg AEN,Data_flag=1;
 
 inout TReady, IReady,MEMWR;        //IOW and IOR always input to the DMA but they are defined as inout because the are on the control bus
-input IOR,IOW,IOflag;
+input IOR,IOW,IOflag,TC;
 reg iready,tready,memwr;
 
 wire myBus;
@@ -24,8 +24,16 @@ begin
 AEN <= 0;
 end                   
 
+always@ (posedge TC)begin
+AEN=0;
+end
+
+
 always @(posedge IReady or posedge reset or posedge wrflag)  
 begin
+
+
+
 if (!cs) begin 
 
    if(!IOW&&IOR)
@@ -39,7 +47,7 @@ if (!cs) begin
 if (!reset)begin
 
    if (HLDA) begin AEN <=1; end
-   else if (!HLDA) begin AEN <=0; end
+   else if (!HLDA ) begin AEN <=0; end
 
    if (wrflag===1 && HLDA===1) begin
      

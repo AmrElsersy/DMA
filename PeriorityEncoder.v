@@ -6,7 +6,7 @@
 
 
 
-module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, channel_num , RESET , clk,memtomem ); 
+module Priority (HRQ , DACK , HLDA , DREQ , in_commandReg_3bits , in_requestReg_3bits , in_maskReg_4bits, channel_num , RESET , clk,memtomem ,status_tc); 
 
 /*****************inputs from internal Registers ****************/ 
 
@@ -30,7 +30,7 @@ input wire [2:0] in_requestReg_3bits;
  * in_maskReg_4bits[3] : 0--> Clear Channel 3 mask bit  , 1--> Set Channel 3 mask bit
  */
 input wire [3:0] in_maskReg_4bits ; 
-input wire clk ,memtomem;  
+input wire clk ,memtomem,status_tc;  
 /*****************inputs from DMA pins ****************/ 
 input wire [3:0] DREQ ; 
 input wire HLDA ; 
@@ -50,6 +50,11 @@ HRQ <= 1;
 end 
 
 Decoder2to4 Decoder1 (channel[3:0] , in_requestReg_3bits[1:0] );
+
+always @(posedge status_tc)
+begin
+HRQ <= 0;
+end
 
 always @(posedge clk or posedge RESET) begin 
 

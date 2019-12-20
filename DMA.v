@@ -41,7 +41,7 @@ begin
 status[ch_select] <= status_tc;
 end
 
-Priority priority(HRQ , DACK , HLDA , DREQ , {command_out[7:6],command_out[4]} , request_out , mask_out, ch_select ,Reset , clk ,command_out[0]);
+Priority priority(HRQ , DACK , HLDA , DREQ , {command_out[7:6],command_out[4]} , request_out , mask_out, ch_select ,Reset , clk,command_out[0] ,status_tc);
 
 Command_Register com_reg(command_out , Data , mode_out[4] , Address[3:0] , IOR , IOW ,Reset , EOP , clk, command_writed) ;  
 
@@ -63,6 +63,6 @@ DATA_buffer data_buf(Data ,Data_buffer_out , Data_buffer_in , TReady,CS,IOR,IOW,
 
 Read_buffer_current rf_current(Read_buffer,Data_buffer_in,clk,Reset,conc_flag_out);
 
-timingcontrol tim_control(mode_out[0],MEMWR,CS,clk,HLDA,AEN,Reset,IReady,TReady,IOR,IOW,IOflag,command_out[0],Data_flag,flag_data_ready,address_ready,processor_write_done,myBus,command_writed,request_writed,Address);
+timingcontrol tim_control(mode_out[0],MEMWR,CS,clk,HLDA,AEN,Reset,IReady,TReady,IOR,IOW,IOflag,command_out[0],Data_flag,flag_data_ready,address_ready,processor_write_done,myBus,command_writed,request_writed,Address,status_tc);
 
 endmodule
